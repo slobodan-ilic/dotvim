@@ -1,3 +1,33 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git@github.com:ctrlpvim/ctrlp.vim.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = git@github.com:SirVer/ultisnips.git
+[submodule "bundle/vim-black"]
+	path = bundle/vim-black
+	url = git@github.com:bcooksey/vim-black.git
+[submodule "bundle/commentary"]
+	path = bundle/commentary
+	url = git@github.com:tpope/vim-commentary.git
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "bundle/rhubarb"]
+	path = bundle/rhubarb
+	url = https://github.com/tpope/vim-rhubarb.git
+[submodule "bundle/sensible"]
+	path = bundle/sensible
+	url = https://github.com/tpope/vim-sensible.git
+[submodule "bundle/snippets"]
+	path = bundle/snippets
+	url = git@github.com:honza/vim-snippets.git
+[submodule "bundle/unimpaired"]
+	path = bundle/unimpaired
+	url = git@github.com:tpope/vim-unimpaired.git

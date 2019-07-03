@@ -18,7 +18,7 @@ let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 " map <C-n> :NERDTreeToggle<CR>
-let NERDTreeIgnore = ['\.pyc$', '\.swp$', '\venv*$']
+let NERDTreeIgnore = ['\.pyc$', '\.swp$', '\venv*$', '\.egg-info$']
 let NERDTreeShowLineNumbers = 1
 autocmd FileType nerdtree setlocal relativenumber
 " let g:NERDTreeDirArrowExpandable = '+'

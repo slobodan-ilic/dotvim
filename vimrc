@@ -5,6 +5,7 @@ set secure
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+set history=200
 
 autocmd VimEnter * silent exec "! echo -ne '\e[1 q'"
 autocmd VimLeave * silent exec "! echo -ne '\e[5 q'" 

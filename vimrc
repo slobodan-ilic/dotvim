@@ -7,10 +7,12 @@ syntax on
 filetype plugin indent on
 set history=200
 
-autocmd VimEnter * silent exec "! echo -ne '\e[1 q'"
-autocmd VimLeave * silent exec "! echo -ne '\e[5 q'" 
+" autocmd VimEnter * silent exec "! echo -ne '\e[1 q'"
+" autocmd VimLeave * silent exec "! echo -ne '\e[5 q'" 
 autocmd FileType javascript setlocal softtabstop=2 shiftwidth=2 smarttab
 autocmd FileType haskell setlocal softtabstop=2 shiftwidth=2 smarttab
+" autocmd FileType go setlocal softtabstop=4 shiftwidth=4 smarttab
+autocmd FileType groovy setlocal softtabstop=4 shiftwidth=4 smarttab
 
 set encoding=utf8
 " set mouse=nicr
@@ -59,6 +61,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_pylint_args = '--rcfile setup.cfg'
 nnoremap ,pl :SyntasticCheck pylint <CR>
 
 set dip+=vertical
@@ -96,3 +99,18 @@ nnoremap ,t% :!pytest -s --runxfail "%" <CR>
 " prettier
 let g:prettier#autoformat_config_present = 1
 let g:prettier#autoformat_require_pragma = 0
+
+" these "Ctrl mappings" work well when Caps Lock is mapped to Ctrl
+nmap <silent> t<C-n> :TestNearest -s -v<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
+
+" make test commands execute using dispatch.vim
+let test#strategy = "basic"
+let test#python#runner = "pytest"
+
+" mypy
+nnoremap ,mp :!mypy % <CR>
+nnoremap ,is :!isort % <CR>

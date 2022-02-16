@@ -114,3 +114,6 @@ let test#python#runner = "pytest"
 " mypy
 nnoremap ,mp :!mypy % <CR>
 nnoremap ,is :!isort % <CR>
+
+" Ag search
+let g:ackprg = 'ag --nogroup --nocolor --column'
